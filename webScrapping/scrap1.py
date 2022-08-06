@@ -3,7 +3,6 @@
 #
 
 import pandas as pd
-import csv
 
 url = 'https://en.wikipedia.org/wiki/CrossFit_Games'
 
