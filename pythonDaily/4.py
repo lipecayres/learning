@@ -1,28 +1,75 @@
-# Do a system that asks 4 bimestral grades and show the average
+# Do a system that asks school gradesList and return the average
 
 # CODE
 
-    # Total of bimestral numbers
+# Variables
 
-totalGrades = 4
+    # Grades Quantity
+gradesQuantity = 0
 
-    # List of grades
-grades = []
+    # List of gradesList
+gradesList = []
 
-    # Getting total numbers
 
-counter = 1
-for grade in range(totalGrades):
-    x = float(input("Grade " + str(counter) + ": "))
-    grades.append(x)
-    counter += 1
+def main():
 
-    # Getting list average:
+    print()
 
-average = sum(grades) / len (grades)
+    gradesQuant()
+    inputGrades	()
+    average()
 
-    #Printing results
 
-print()
-print("Grades average: " + str(average))
-print()
+def gradesQuant ():
+    global gradesQuantity
+
+    while True:
+        try:
+
+            # Asking a int number
+            
+            gradesQuantity = int(input("Quantity of grades: "))
+            return gradesQuantity
+        except ValueError:
+            print()
+            print("Please insert a number.")
+            print()
+
+    
+def inputGrades ():
+
+    global gradesQuantity
+    global gradesList
+    counter = 1
+
+    for grade in range(gradesQuantity):
+        while True:
+            try:
+
+                # Asking a int number
+                
+                x = float(input(f"Grade {counter}: "))
+                gradesList.append(x)
+                counter += 1
+                break
+
+            except ValueError:
+                print()
+                print("Please insert a number.")
+                print()
+
+
+def average():
+
+        # Getting list average:
+
+    average = sum(gradesList) / len (gradesList)
+
+        #Printing results
+
+    print()
+    print(f"Grades average: {average}")
+    print()
+
+
+main()
