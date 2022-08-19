@@ -27,18 +27,24 @@ while True:
 
 if weight >= weightLimit :
     overweight = weight - weightLimit
+   
+    #Tax Math
+    taxValue = tax * overweight
+   
+    # Printing at screen
+    print()
+    print(" >>> Summary <<< ")
+    print()
+    print(f"Overweight: {round(overweight, 2)} kg")
+    print(f"Tax: ${round(taxValue, 2)}")
+    print()
 
 else:
     overweight = 0
 
-#Tax Math
-taxValue = tax * overweight
+    print("No tax required!")
+    print("Weight is under law limit.")
 
 
-# Printing at screen
-print()
-print(" >>> Summary <<< ")
-print()
-print(f"Overweight: {round(overweight, 2)} kg")
-print(f"Tax: ${round(taxValue, 2)}")
-print()
+
+
