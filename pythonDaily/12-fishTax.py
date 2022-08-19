@@ -38,5 +38,5 @@ taxValue = tax * overweight
 # Printing at screen
 print()
 print(" >>> Summary <<< ")
-print(f"Overweight: {round(overweight), 2} kg")
-print(f"Tax: ${round(taxValue), 2}")
+print(f"Overweight: {round(overweight, 2)} kg")
+print(f"Tax: ${round(taxValue, 2)}")
