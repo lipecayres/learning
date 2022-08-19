@@ -16,8 +16,8 @@ def intro():
     print()
 
 
-    # function to validate number entry
-def numberEntry():
+    # Function to validate number entry
+def floatEntry():
     while True:
         n = input("Value: ")    
         try:
