@@ -1,0 +1,29 @@
+## System to calculate fish overweighting and print the associated tax.
+## Weight limit = 50kg | Tax = $4/kg
+
+
+### CODE ###
+
+#Variables:
+
+weightLimit = 50
+tax = 4
+weight = 0
+
+print()
+print(">>> Fish Overveight Calculator <<<")
+print()
+
+# Getting fish weight
+while True:
+    weight = input("Insert fish weight (kg): ")    
+    try:
+        weight = float(weight)
+        break
+    except ValueError:
+        print("Error. Insert a number!")
+
+# Overweight and tax math
+overweight = weight - weightLimit
+taxValue = overweight * tax
+
