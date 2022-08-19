@@ -4,3 +4,13 @@
 # Discounts: IR = 11% | INSS = 8% | syndicate: 5%
 
 ### CODE ###
+
+def start():
+
+
+def intro():
+    print()
+    print(">>> Salary Calculator <<<")
+    print()
+
+start()
