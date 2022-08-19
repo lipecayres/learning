@@ -24,6 +24,16 @@ while True:
         print("Error. Insert a number!")
 
 # Overweight and tax math
-overweight = weight - weightLimit
-taxValue = overweight * tax
 
+if weight >= weightLimit :
+    overweight = weight - weightLimit
+
+else:
+    overweight = 0
+
+
+# 
+
+# Printing at screen
+print()
+Print("")
