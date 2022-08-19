@@ -41,10 +41,11 @@ if weight >= weightLimit :
 
 else:
     overweight = 0
-
+    
+    print()
     print("No tax required!")
     print("Weight is under law limit.")
-
+    print()
 
 
 
