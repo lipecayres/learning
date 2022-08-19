@@ -31,8 +31,10 @@ if weight >= weightLimit :
 else:
     overweight = 0
 
+#Tax Math
+taxValue = tax * overweight
 
-# 
+
 
 # Printing at screen
 print()
