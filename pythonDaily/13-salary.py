@@ -19,15 +19,13 @@ def intro():
     # Function to validate number entry
 def floatEntry():
     while True:
-        n = input("Value: ")    
+        n = input("Number:")    
         try:
             n = float(n)
             break
         except ValueError:
             print("Invalid entry. Try again!")
     return n
-
-
 
 
 start()
