@@ -136,8 +136,8 @@ def farToCel ():
             print("Invalid entry. Try again!")
 
         # convertion
-    temp2 = temp1 + 273.15
-
+    temp2 = (temp1 - 32)/1.8
+    
         # printing results
     print()
     print(f"Fahrenheit (ºF): {temp1}")
