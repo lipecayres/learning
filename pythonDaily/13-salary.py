@@ -17,7 +17,7 @@ finalSalary = 0
 def start():
     intro()
     payment()
-  #  summary()
+    summary()
 
 
 
@@ -40,9 +40,17 @@ def payment ():
     syndicate = totalSalary *0.05
     finalSalary = totalSalary - ir - inss - syndicate
 
-    print(f" {totalSalary} , {finalSalary}, {ir}, {inss}, {syndicate}")
 
+def summary ():
+    print()
+    print(f" + Total Salary: ${totalSalary}")
+    print(f" - IR (11%): ${ir}")
+    print(f" - INSS (8%): ${inss}")
+    print(f" - Syndicate (5%): ${syndicate}")
+    print(f" = Final Salary: ${totalSalary}")
+    print()    
 
+    
     # Introduction Layout
 def intro():
     print()
