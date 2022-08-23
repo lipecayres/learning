@@ -31,6 +31,7 @@ def payment ():
     print("Hou much money do you make per hour?")
     moneyHour = floatEntry()
 
+    print()
     print("Hou many hours do you hork per month?")
     workTime = floatEntry()
 
@@ -50,7 +51,7 @@ def summary ():
     print(f" = Final Salary: ${totalSalary}")
     print()    
 
-    
+
     # Introduction Layout
 def intro():
     print()
