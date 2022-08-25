@@ -1,0 +1,27 @@
+
+
+body
+{
+    background-color: red;
+    color: white;
+}
+
+.centered
+{
+    text-align: center;
+}
+
+.large
+{
+    font-size: large;
+}
+
+.medium
+{
+    text-align: medium;
+}
+
+.small
+{
+    text-align: small;
+}
