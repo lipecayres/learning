@@ -12,12 +12,11 @@
             alert('hello, ' + name);
         }
 
-        function listen ()
-        {
-            document.querySelector('form').addEventListener('submit', greet);
-        }
+        
 
-        document.addEventListener('DOMContentLoaded', listen);
+        document.addEventListener('DOMContentLoaded', function (){ 
+            document.querySelector('form').addEventListener('submit', greet);
+        });
     </script>
     <title>
         hello, title
