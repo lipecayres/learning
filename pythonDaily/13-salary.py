@@ -35,11 +35,11 @@ def payment ():
     print("Hou many hours do you hork per month?")
     workTime = floatEntry()
 
-    totalSalary = moneyHour * workTime
-    ir = totalSalary * 0.11
-    inss = totalSalary * 0.08
-    syndicate = totalSalary *0.05
-    finalSalary = totalSalary - ir - inss - syndicate
+    totalSalary = round(moneyHour * workTime, 2)
+    ir = round(totalSalary * 0.11, 2)
+    inss = round(totalSalary * 0.08, 2)
+    syndicate = round(totalSalary *0.05, 2)
+    finalSalary = round(totalSalary - ir - inss - syndicate, 2)
 
 
 def summary ():
@@ -48,7 +48,7 @@ def summary ():
     print(f" - IR (11%): ${ir}")
     print(f" - INSS (8%): ${inss}")
     print(f" - Syndicate (5%): ${syndicate}")
-    print(f" = Final Salary: ${totalSalary}")
+    print(f" = Final Salary: ${round(finalSalary, 2)}")
     print()    
 
 
@@ -62,13 +62,12 @@ def intro():
     # Function to validate number entry
 def floatEntry():
     while True:
-        n = input("Number:")    
+        n = input("Number: ")    
         try:
             n = float(n)
             break
         except ValueError:
             print("Invalid entry. Try again!")
     return n
-
 
 start()
