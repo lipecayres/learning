@@ -5,7 +5,7 @@
 }
 
 body{
-    background-color: black;
+    background-color: #151E3D;
 }
 
 .header{
@@ -26,6 +26,7 @@ nav img{
 
 }
 
+
 .nav-links{
     flex: 1;
     text-align: right;
@@ -41,7 +42,7 @@ nav img{
 }
 
 .nav-links ul li a{
-    color: gainsboro;
+    color: #fff;
     text-decoration: none;
 
 }
@@ -56,14 +57,14 @@ nav img{
 .footer{
     margin-top: 60px;
     text-align: center;
-    color: gainsboro;
+    color: #fff;
 }
 
 .icons a{
     font-size: 25px;
     display: inline-block;
     padding: 0 10px;
-    color: gainsboro;
+    color: #fff;
 }
 .icons a:hover{
     color: aqua;
@@ -88,18 +89,29 @@ nav img{
 }
 
 .text-opening h1{
-    color: gainsboro;
+    color: #fff;
     font-size: 80px;
 }
 
 .text-opening h2{
-    color: gainsboro;
+    color: #fff;
     font-size: 60px;
 }
 .text-opening p{
     margin-top: 20px;
-    color: aqua;
+    color: #fff;
+
 }
+
+.text-opening p a{
+    color: aquamarine;
+}
+
+.text-opening p a:hover{
+
+    text-decoration: none;
+}
+
 
 .know-me-btn{
 
@@ -114,8 +126,8 @@ nav img{
 }
 
 .know-me-btn:hover{
-    border: 1px solid lightgreen;
-    background: lightgreen;
+    border: 1px solid #fff;
+    background: #fff;
     transition: 0.5s;
     text-decoration: none;
 }
