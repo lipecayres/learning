@@ -22,7 +22,7 @@ nav{
 }
 
 nav img{
-    width: 150px;
+    width: 60px;
 
 }
 
@@ -50,6 +50,30 @@ nav img{
     color: aqua;
 }
 
+
+/* -------------- Footer Section -------------- */
+
+.footer{
+    margin-top: 60px;
+    text-align: center;
+    color: gainsboro;
+}
+
+.icons a{
+    font-size: 25px;
+    display: inline-block;
+    padding: 0 10px;
+    color: gainsboro;
+}
+.icons a:hover{
+    color: aqua;
+    text-decoration: none;
+}
+
+.footer p{
+    margin-top: 4px;
+    font-size: 10px;
+}
 
 
 /* -------------- Homepage Section -------------- */
