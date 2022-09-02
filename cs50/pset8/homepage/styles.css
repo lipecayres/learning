@@ -42,4 +42,27 @@ nav img{
 
 .nav-links ul li a{
     color: gainsboro;
+    text-decoration: none;
+
+}
+
+.nav-links ul li a:hover{
+    color: aqua;
+}
+
+
+
+/* -------------- Homepage Section -------------- */
+
+.text-opening{
+    padding: 120px 430px;
+}
+
+.text-opening h5{
+    color: aquamarine;
+    font-size: 16px;
+}
+.text-opening h2{
+    color: gainsboro;
+    font-size: 60px;
 }
