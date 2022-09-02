@@ -55,14 +55,24 @@ nav img{
 /* -------------- Homepage Section -------------- */
 
 .text-opening{
-    padding: 120px 430px;
+    padding: 120px 460px;
 }
 
 .text-opening h5{
     color: aquamarine;
     font-size: 16px;
 }
+
+.text-opening h1{
+    color: gainsboro;
+    font-size: 80px;
+}
+
 .text-opening h2{
     color: gainsboro;
     font-size: 60px;
+}
+.text-opening p{
+    margin-top: 20px;
+    color: aqua;
 }
