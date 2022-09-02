@@ -76,3 +76,22 @@ nav img{
     margin-top: 20px;
     color: aqua;
 }
+
+.know-me-btn{
+
+    margin-top: 40px;
+    display: inline-block;
+    color: aquamarine;
+    border: 1px solid aquamarine;
+    padding: 12px 25px;
+    font-size: 13px;
+    background: transparent;
+    cursor: pointer;
+}
+
+.know-me-btn:hover{
+    border: 1px solid lightgreen;
+    background: lightgreen;
+    transition: 0.5s;
+    text-decoration: none;
+}
