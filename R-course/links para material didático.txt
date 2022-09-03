@@ -1,0 +1,11 @@
+Material didático que pode ser usado para 
+o aprendizado: 
+
+1 - Livro: R para cientistas sociais
+http://www.uesc.br/editora/livrosdigitais_20140513/r_cientistas.pdf
+
+2 - Ebook: Ciência de Dados em R
+https://livro.curso-r.com/
+
+3 - Livro:Ciência de Dados com R - Introdução
+https://cdr.ibpad.com.br/cdr-intro.pdf
