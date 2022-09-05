@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <title>Calculadora de notas</title>
+</head>
+<body>
+    <section class="header">
+        <h1>Calculadora de notas:</h1>
+        <p>Insira suas notas:</p>
+        <ul>
+            <li>Primeira nota <input type="number" id="grade-1"></li>
+            <li>Segunda nota <input type="number" id="grade-2"></li>
+            <li>Terceira nota <input type="number" id="grade-3"></li>
+        </ul>
+            <button class="calculate-btn" type="submit" id="btn">Calcular</button>
+        <div id="status" class="resultado">Resultado</div>
+
+    </section>
+    
+    <script>
+
+    var botao = window.document.getElementById('btn');
+           
+        function calcular() {
+    var resultado = window.document.getElementById('status');
+    var nota1 = window.document.getElementById('grade-1').value;
+    var nota2 = window.document.getElementById('grade-2').value;
+    var nota3 = window.document.getElementById('grade-3').value;
+    var notaFinal = (Number(nota1) + Number(nota2) + Number(nota3))/3 ;
+    var final = notaFinal.toFixed(1)
+
+    if(final >= 7 ) {
+        resultado.innerHTML = `Aprovado, sua nota final foi: ${final}`
+    }    
+    else{
+        resultado.innerHTML = `Reprovado, sua nota final foi: ${final}`
+    }
+}
+    botao.addEventListener('click', calcular);
+    </script>
+
+</body>
+</html>
