@@ -5,9 +5,9 @@
 }
 body {
     min-height: 80vh;
-    background-color: green;
+    background-color: black;
 }
-  
+
 .container {
     text-align: center;
     margin: 20px;
@@ -38,8 +38,8 @@ body {
     right: 20px;
 }
 
-.termomether{
-    width: 300px;
+.distance-img{
+    width: 800px;
     margin-top: 20px;
 }
 

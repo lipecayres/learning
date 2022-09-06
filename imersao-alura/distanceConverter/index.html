@@ -1,21 +1,21 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css">
-    <title> Conversor de Moedas</title>
+    <title> Conversor de Distancia</title>
   </head>
   <body>
     <section class="container">
         <div >
             <h1 class="page-title">
-            Conversor de Moedas</h1>
+            Conversor de Distancia</h1>
             <p class="page-subtitle">
-            Descubra o valor em reais R$
+            Descubra a distancia em anos-luz R$
             </p>
-            <img class="money-img" src="https://play-lh.googleusercontent.com/V9Re3ElJz3U2zZ-t1Snx1W1FMtgnmczVBqEwG_ANArp6X1e0UJ_zmb_POR6T4Q4ioOo">
+            <img class="distance-img" src="https://i.ytimg.com/vi/5XXEXPNBGX0/maxresdefault.jpg">
         </div>
         <div class="input">
-            <ul> Valor em Dolar (U$): <input type="number" id="dolar"></ul>
-            <button class="action-btn" id="btn"> CLIQUE PARA DESCOBRIR <br> VALOR EM REAIS</button>
+            <ul> Distancia em KM: <input type="number" id="km"></ul>
+            <button class="action-btn" id="btn"> CLIQUE PARA DESCOBRIR <br> DISTANCIA E TEMPO</button>
         </div>
         <div id="status" class="resultado"></div>
 
@@ -25,18 +25,19 @@
     </section>
 
     <script>
-        var dolarToday = 5.23
-        var bitcoinToday = 19748.4
+        var kmToLightYear = 1.057e-13
+        var lightSpeed = 299792.458
+
         var actionButton = window.document.getElementById('btn');
                
             function converter() {
         var results = window.document.getElementById('status');
-        var dolar = window.document.getElementById('dolar').value;
-        dolar = parseFloat(dolar)
-        var reais = dolar * dolarToday;
-        var bitcoin =  reais / (bitcoinToday *dolarToday)
+        var km = window.document.getElementById('km').value;
+        km = parseFloat(km)
+        var finalLightYear = km * kmToLightYear;
+        var timeDistance =  finalLightYear / lightSpeed
        
-        results.innerHTML = `Reais: R$ ${reais.toFixed(2)} <br> Bitcoin: BTC ${bitcoin}`
+        results.innerHTML = `Anos-luz: R$ ${finalLightYear.toFixed(2)} <br> Tempo (s): ${timeDistance}`
     }
         actionButton.addEventListener('click', converter);
         </script>
