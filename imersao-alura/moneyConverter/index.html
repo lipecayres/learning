@@ -1,23 +1,23 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css">
-    <title> Conversor de Temperatura</title>
+    <title> Conversor de Moedas</title>
   </head>
   <body>
     <section class="container">
         <div >
             <h1 class="page-title">
-            Conversor de Temperatura</h1>
+            Conversor de Moedas</h1>
             <p class="page-subtitle">
-            Convertor de Celsius para fahrenheit e kelvin
+            Descubra o valor em reais R$
             </p>
-            <img class="termomether" src="https://play-lh.googleusercontent.com/Vn9sIUPcCVihrxMATWR_MjCIFuc5quCw-R3UN8Rmoze7rgaBhHdmF2RqjX3x28EJoQ">
+            <img class="money-img" src="https://play-lh.googleusercontent.com/V9Re3ElJz3U2zZ-t1Snx1W1FMtgnmczVBqEwG_ANArp6X1e0UJ_zmb_POR6T4Q4ioOo">
         </div>
         <div class="temp">
-            <ul> Temperatura (ºC) <input type="number" id="celc"></ul>
-            <button class="action-btn" id="btn">CONVERTER</button>
+            <ul> Valor em Dolar: (U$) <input type="number" id="dolar"></ul>
+            <button class="action-btn" id="btn"> CLIQUE PAPA DESCOBRIR <br> VALOR EM REAL</button>
         </div>
-        <div id="status" class="resultado">Resultado</div>
+        <div id="status" class="resultado"></div>
 
         <a href="https://github.com/lipecayres" target="_blank">
         <img src="images/logo-dev.png" alt="" class="alura-logo">
@@ -25,19 +25,20 @@
     </section>
 
     <script>
-
-        var botao = window.document.getElementById('btn');
+        var dolarToday = 5.23
+        var bitcoinToday = 19748.4
+        var actionButton = window.document.getElementById('btn');
                
             function converter() {
-        var resultado = window.document.getElementById('status');
-        var celcius = window.document.getElementById('celc').value;
-        celcius = parseFloat(celcius)
-        var fahrenheit = (celcius *9/5)+32;
-        var kelvin =  (celcius + 273.15)
+        var results = window.document.getElementById('status');
+        var dolar = window.document.getElementById('dolar').value;
+        dolar = parseFloat(dolar)
+        var reais = dolar * dolarToday;
+        var bitcoin =  reais / (bitcoinToday *dolarToday)
        
-        resultado.innerHTML = `Fahrenheit: ${fahrenheit.toFixed(2)} | Kelvin: ${kelvin.toFixed(2)}`
+        results.innerHTML = `Valor em: <br> Reais: ${reais.toFixed(2)} <br> Bitcoin: ${bitcoin}`
     }
-        botao.addEventListener('click', converter);
+        actionButton.addEventListener('click', converter);
         </script>
   </body>
 </html>
