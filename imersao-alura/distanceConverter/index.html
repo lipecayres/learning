@@ -1,0 +1,44 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title> Conversor de Moedas</title>
+  </head>
+  <body>
+    <section class="container">
+        <div >
+            <h1 class="page-title">
+            Conversor de Moedas</h1>
+            <p class="page-subtitle">
+            Descubra o valor em reais R$
+            </p>
+            <img class="money-img" src="https://play-lh.googleusercontent.com/V9Re3ElJz3U2zZ-t1Snx1W1FMtgnmczVBqEwG_ANArp6X1e0UJ_zmb_POR6T4Q4ioOo">
+        </div>
+        <div class="input">
+            <ul> Valor em Dolar (U$): <input type="number" id="dolar"></ul>
+            <button class="action-btn" id="btn"> CLIQUE PARA DESCOBRIR <br> VALOR EM REAIS</button>
+        </div>
+        <div id="status" class="resultado"></div>
+
+        <a href="https://github.com/lipecayres" target="_blank">
+        <img src="https://raw.githubusercontent.com/lipecayres/my-portfolio/main/images/f_logo.png" alt="" class="my-logo">
+        </a>
+    </section>
+
+    <script>
+        var dolarToday = 5.23
+        var bitcoinToday = 19748.4
+        var actionButton = window.document.getElementById('btn');
+               
+            function converter() {
+        var results = window.document.getElementById('status');
+        var dolar = window.document.getElementById('dolar').value;
+        dolar = parseFloat(dolar)
+        var reais = dolar * dolarToday;
+        var bitcoin =  reais / (bitcoinToday *dolarToday)
+       
+        results.innerHTML = `Reais: R$ ${reais.toFixed(2)} <br> Bitcoin: BTC ${bitcoin}`
+    }
+        actionButton.addEventListener('click', converter);
+        </script>
+  </body>
+</html>
