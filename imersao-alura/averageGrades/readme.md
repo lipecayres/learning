@@ -1,3 +1,3 @@
 ## Link to access:
-nimble-cranachan-68fe22
+https://nimble-cranachan-68fe22.netlify.app/
 (Deployed on Netlify.com)
