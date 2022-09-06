@@ -4,33 +4,34 @@
     font-family: 'Roboto Mono',monospace;
 }
 body {
-    min-height: 100vh;
-    background-color:darkblue;
+    min-height: 80vh;
+    background-color: green;
 }
   
 .container {
     text-align: center;
-    padding: 20px;
+    margin: 20px;
 
 }
 
 .page-title {
     color:#ffffff;
-    margin: 20px 0 5px;
-    font-size: 45px;
+    margin: 40px 0 5px;
+    font-size: 80px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
 .page-subtitle {
     color:#ffffff;
-    margin-top: 5px;
-    font-size: 16px;
+    margin-top: 20px;
+    font-size: 25px;
 }
 
 .page-logo {
     width: 200px;
 }
 
-.alura-logo {
+.my-logo {
     width: 50px;
     position: absolute;
     top: 20px;
@@ -42,10 +43,11 @@ body {
     margin-top: 20px;
 }
 
-.temp {
+.input {
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
-    color: aqua;
-    font-size: 18px;
+    color: white;
+    font-size: 25px;
+    font-weight: 700;
 }
 .temp button{
     margin-top: 25p;
