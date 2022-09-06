@@ -1,0 +1,43 @@
+<html>
+  <head>
+    <link rel="stylesheet" href="style.css">
+    <title> Conversor de Temperatura</title>
+  </head>
+  <body>
+    <section class="container">
+        <div >
+            <h1 class="page-title">
+            Conversor de Temperatura</h1>
+            <p class="page-subtitle">
+            Convertor de Celsius para fahrenheit e kelvin
+            </p>
+            <img class="termomether" src="https://play-lh.googleusercontent.com/Vn9sIUPcCVihrxMATWR_MjCIFuc5quCw-R3UN8Rmoze7rgaBhHdmF2RqjX3x28EJoQ">
+        </div>
+        <div class="temp">
+            <ul> Temperatura (ºC) <input type="number" id="celc"></ul>
+            <button class="action-btn" id="btn">CONVERTER</button>
+        </div>
+        <div id="status" class="resultado">Resultado</div>
+
+        <a href="https://github.com/lipecayres" target="_blank">
+        <img src="images/logo-dev.png" alt="" class="alura-logo">
+        </a>
+    </section>
+
+    <script>
+
+        var botao = window.document.getElementById('btn');
+               
+            function converter() {
+        var resultado = window.document.getElementById('status');
+        var celcius = window.document.getElementById('celc').value;
+        celcius = parseFloat(celcius)
+        var fahrenheit = (celcius *9/5)+32;
+        var kelvin =  (celcius + 273.15)
+       
+        resultado.innerHTML = `Fahrenheit: ${fahrenheit.toFixed(2)} | Kelvin: ${kelvin.toFixed(2)}`
+    }
+        botao.addEventListener('click', converter);
+        </script>
+  </body>
+</html>
