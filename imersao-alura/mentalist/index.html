@@ -19,7 +19,7 @@
     </p>
     <h6>Digite um número de 0 a 10</h6>
     <input type="number" id="valor" /><br>
-    <button type="submit" onclick="Chutar()">Chutar</button>
+    <button type="submit" onclick="guess()" id="btn">Chutar</button>
     <h2 class="resultado" id="resultado"></h2>
   </div>
   <a href="https://github.com/lipecayres" target="_blank">
@@ -27,9 +27,42 @@
     </a>
 
     <script>
+        var randomNumber = parseInt(Math.random() *11);
+        var attemptsNow = 0;
+        var resultado = window.document.getElementById('resultado');
 
+        console.log(randomNumber)
+
+        function guess() {
+            var attempt = parseInt(document.getElementById("valor").value);
+            console.log(attemptsNow)
+
+            if (attemptsNow < 2){
+                if (attempt < 0 || attempt >10) {
+                resultado.innerHTML = "Número inválido. Tente um número de 0 a 10.";
+                } else if (attempt == randomNumber) {
+                resultado.innerHTML = "Parabéns, você acertou. O número é " + randomNumber;
+                } else {
+                    if (attempt < randomNumber){
+                    resultado.innerHTML = "O número é menor do que " + attempt;  
+                    } else if (attempt > randomNumber){
+                    resultado.innerHTML = "O número é maior do que " + attempt;
+                    }
+               }
+            } else if (attemptsNow == 2){
+                if (attempt == randomNumber) {
+                resultado.innerHTML = "Parabéns, você acertou. O número é " + randomNumber;
+                } else {
+                resultado.innerHTML = "Tentativas acabaram. Atualize para tentar de novo."
+                }
+            } else {
+                resultado.innerHTML = "Tentativas acabaram. Atualize para tentar de novo."
+            }
+            attemptsNow++
         }
-    </script>
+
+
+</script>
 </body>
 
 </html>
