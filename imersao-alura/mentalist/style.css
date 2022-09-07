@@ -21,15 +21,24 @@ body {
   .page-title {
     color: #ffffff;
     margin: 0 0 5px;
-  }
+    font-size: 60px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+
+}
   
   .page-subtitle {
     color: #ffffff;
     margin-top: 16px;
+    font-size: 16px;
   }
   
+.container h6{
+    color: #ffffff;
+    margin-top: 15px;
+}
+
   .page-logo {
-    width: 200px;
+    width: 250px;
   }
   
   .my-logo {
