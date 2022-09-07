@@ -31,11 +31,8 @@
         var attemptsNow = 0;
         var resultado = window.document.getElementById('resultado');
 
-        console.log(randomNumber)
-
         function guess() {
             var attempt = parseInt(document.getElementById("valor").value);
-            console.log(attemptsNow)
 
             if (attemptsNow < 2){
                 if (attempt < 0 || attempt >10) {
