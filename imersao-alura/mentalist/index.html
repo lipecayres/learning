@@ -1,0 +1,65 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="style.css">
+  <title>
+    Mentalista - O jogo
+  </title>
+</head>
+
+<body>
+  <div class="container">
+    <h1 class="page-title">
+      Mentalista - O Jogo
+    </h1>
+    <img src="https://png.pngtree.com/png-vector/20190912/ourmid/pngtree-magician-bear-logo-png-image_1730471.jpg" class="page-logo" alt=""><br>
+    <p class="page-subtitle">
+      Tente adivinhar o número que estou pensando. <br> 
+      Você tem 3 tentativas. <br>
+    </p>
+    <h6>Digite um número de 0 a 10</h6>
+    <input type="number" id="valor" /><br>
+    <button type="submit" onclick="guess()" id="btn">Chutar</button>
+    <h2 class="resultado" id="resultado"></h2>
+  </div>
+  <a href="https://github.com/lipecayres" target="_blank">
+    <img src="https://raw.githubusercontent.com/lipecayres/my-portfolio/main/images/f_logo.png" alt="" class="my-logo">
+    </a>
+
+    <script>
+        var randomNumber = parseInt(Math.random() *11);
+        var attemptsNow = 0;
+        var resultado = window.document.getElementById('resultado');
+
+        function guess() {
+            var attempt = parseInt(document.getElementById("valor").value);
+
+            if (attemptsNow < 2){
+                if (attempt < 0 || attempt >10) {
+                resultado.innerHTML = "Número inválido. Tente um número de 0 a 10.";
+                } else if (attempt == randomNumber) {
+                resultado.innerHTML = "Parabéns, você acertou. O número é " + randomNumber;
+                } else {
+                    if (attempt < randomNumber){
+                    resultado.innerHTML = "O número é menor do que " + attempt;  
+                    } else if (attempt > randomNumber){
+                    resultado.innerHTML = "O número é maior do que " + attempt;
+                    }
+               }
+            } else if (attemptsNow == 2){
+                if (attempt == randomNumber) {
+                resultado.innerHTML = "Parabéns, você acertou. O número é " + randomNumber;
+                } else {
+                resultado.innerHTML = "Tentativas acabaram. Atualize para tentar de novo."
+                }
+            } else {
+                resultado.innerHTML = "Tentativas acabaram. Atualize para tentar de novo."
+            }
+            attemptsNow++
+        }
+
+
+    </script>
+</body>
+
+</html>
