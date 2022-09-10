@@ -48,3 +48,8 @@ body > img {
     max-height: 200px;
   }
   
+  .container2 img{
+    margin: 0 10px;
+    text-align: center;
+
+  }
