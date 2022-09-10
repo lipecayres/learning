@@ -1,12 +1,39 @@
 *{padding: 0; margin: 0; box-sizing: border-box;}
+ 
+.page-logo {
+    width: 200px;
+  }
+  
+.my-logo {
+    width: 40px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
 
 body{
+    min-height: 90vh;
     background: url('https://images.pexels.com/photos/3745234/pexels-photo-3745234.jpeg'); 
     background-position: center;
-    background-repeat: no-repeat;
     background-size: cover;
 
     font-family: "Roboto Mono", monospace;
+    color: white;
+}
+
+.container{
     text-align: center;
-    
+    padding: 10px;
+}
+
+.header h1{
+    font-size: 50px;
+    color: white;
+    padding-top: 25px;
+}
+
+.header h2{
+    font-size: 22px;
+    padding: 10px;
 }
