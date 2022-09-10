@@ -20,6 +20,7 @@ body{
 
     font-family: "Roboto Mono", monospace;
     color: white;
+    text-align: center;
 }
 
 .container{
@@ -35,5 +36,15 @@ body{
 
 .header h2{
     font-size: 22px;
-    padding: 10px;
+    padding-top: 10px;
 }
+
+body > img {
+    margin: 0 10px;
+    text-align: center;
+  }
+  
+  img {
+    max-height: 200px;
+  }
+  

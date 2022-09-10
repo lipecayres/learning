@@ -10,14 +10,32 @@
 <body>
     <section class="container">
         <div class="header" >
-            <h1>LiipeC | FLIX</h1>
+            <h1>LiipeC-FLIX</h1>
+            <h2>TOP 5 animes </h2>
             
         </div>
 
         <a href="https://github.com/lipecayres" target="_blank">
         <img src="https://raw.githubusercontent.com/lipecayres/my-portfolio/main/images/f_logo.png" alt="" class="my-logo">
         </a>
-        
+        <img src="" >
     </section>
+
+    <script>
+        var animes =[
+            'https://cdn.myanimelist.net/images/about_me/ranking_items/4757216-b784bd05-0853-439c-b4e4-27ec46ee4c53.jpg?t=1655669475',
+            'https://br.web.img2.acsta.net/pictures/17/02/01/13/28/337995.jpg',
+            'https://www.infoanime.com.br/wa_1_p/pa_12i2wgk42q/big_yugiohduel.jpg',
+            'https://www.jbchost.com.br/editorajbc/wp-content/uploads/2018/01/The-Seven-Deadly-Sins-27-Capa_p.jpg',
+            'https://www.justwatch.com/images/poster/205245513/s332/temporada-1'
+
+        ];
+
+        for (var i=0; i<animes.length; i++)
+        {
+            document.write("<img src=" + animes[i] + ">")
+        };
+    </script>
+
 </body>
 </html>
