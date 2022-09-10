@@ -1,0 +1,9 @@
+*{padding: 0; margin: 0; box-sizing: border-box;}
+
+body{
+    background: url('https://images.pexels.com/photos/3745234/pexels-photo-3745234.jpeg'); 
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
