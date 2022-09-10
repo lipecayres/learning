@@ -10,39 +10,50 @@
     right: 10px;
   }
   
+----------------------------------------
 
-  * {margin: 0; padding: 0; box-sizing: border-box;}
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box;
+  }
 
 :root {
   font-size: 62.5%;
 
-  --primary-color: #db0000;
+  --primary-color: red;
 
-  --primary-hover-color: #a10303;
+  --primary-hover-color: red;
 }
 
 body {
   font-size: 1.6rem;
-  font-family: 'Lato', sans-serif;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 
   min-height: 100vh;
 
-  padding-block: 4rem 8rem;
+  padding-block: 5px 10px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 
-  background: url('https://mearasescoladexadrez.com/wp-content/uploads/2017/11/black-abstract-wallpapers-high-resolution-As-Wallpaper-HD.jpg');
+  background: url('https://images.pexels.com/photos/3745234/pexels-photo-3745234.jpeg');
   background-size: cover;
 }
 
 h1 {
-  color: #ffffff;
-  font-size: 4.8rem;
-  font-family: 'Pacifico', cursive;
+  color: red;
+  font-size: 70px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  padding: 5px ;
+  border: 1px solid white;
+  background-color: white;
+  border-radius: 5px;
+
 }
+
 
 .primary-color {
   color: var(--primary-color);
@@ -64,7 +75,8 @@ h1 {
   display: flex;
   flex-direction: column;
 
-  width: 25rem;
+
+  width: 150px;
 
   padding: 3rem 3rem 3rem;
 
