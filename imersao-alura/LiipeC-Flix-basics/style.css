@@ -6,4 +6,7 @@ body{
     background-repeat: no-repeat;
     background-size: cover;
 
+    font-family: "Roboto Mono", monospace;
+    text-align: center;
+    
 }
