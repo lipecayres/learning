@@ -41,6 +41,7 @@
         var tryNumber = 3;
 
         printTryNumber.innerHTML = "Você tem "+ tryNumber + " tentativas";  
+
                     
         function guess() {
 
@@ -65,12 +66,17 @@
                 resultado.innerHTML = "Parabéns, você acertou. O número é " + randomNumber;
                 } else {
                 resultado.innerHTML = "Tentativas acabaram. Atualize para tentar de novo."
-                }
+                tryNumber--;
+              }
             } else {
                 resultado.innerHTML = "Tentativas acabaram. Atualize para tentar de novo."
-            }
+                tryNumber--;
+              }
             attemptsNow++
-        }
+
+            printTryNumber.innerHTML = "Você tem "+ tryNumber + " tentativas";  
+
+          }
 
 
         function R() {
