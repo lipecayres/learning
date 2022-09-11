@@ -9,30 +9,42 @@
 
 <body>
   <div class="container">
-    <h1 class="page-title">
-      Mentalista - O Jogo
-    </h1>
-    <img src="https://png.pngtree.com/png-vector/20190912/ourmid/pngtree-magician-bear-logo-png-image_1730471.jpg" class="page-logo" alt=""><br>
-    <p class="page-subtitle">
-      Tente adivinhar o número que estou pensando. <br> 
-      Você tem 3 tentativas. <br>
-    </p>
-    <h6>Digite um número de 0 a 10</h6>
-    <input type="number" id="valor" /><br>
-    <button type="submit" onclick="guess()" id="btn">Chutar</button>
-    <h2 class="resultado" id="resultado"></h2>
-  </div>
+    <div class="position">
+      <h1 class="page-title">
+        Mentalista
+      </h1>
+      <h3>- O Jogo -</h3>
+      <p class="page-subtitle">
+        Tente adivinhar o número que estou pensando. <br> 
+        <br>
+      </p>
+     
+      <h6>Digite um número de 0 a 10</h6>
+      <input type="number" id="valor" /><br>
+      <button class="action-btn" type="submit" onclick="guess()" id="btn">Chutar</button>
+      <button class="action-btn" type="submit" onclick="R()" id="again">Tentar novamente</button>
+      
+      <h4 id="tryNumber"></h4>
+      <h2 class="resultado" id="resultado"> </h2>
+    </div>
+    </div>
   <a href="https://github.com/lipecayres" target="_blank">
     <img src="https://raw.githubusercontent.com/lipecayres/my-portfolio/main/images/f_logo.png" alt="" class="my-logo">
     </a>
 
     <script>
+        var resultado = window.document.getElementById('resultado');
+        var printTryNumber = window.document.getElementById('tryNumber')         
+
         var randomNumber = parseInt(Math.random() *11);
         var attemptsNow = 0;
-        var resultado = window.document.getElementById('resultado');
+        var tryNumber = 3;
 
+        printTryNumber.innerHTML = "Você tem "+ tryNumber + " tentativas";  
+                    
         function guess() {
-            var attempt = parseInt(document.getElementById("valor").value);
+
+          var attempt = parseInt(document.getElementById("valor").value);
 
             if (attemptsNow < 2){
                 if (attempt < 0 || attempt >10) {
@@ -42,9 +54,11 @@
                 } else {
                     if (attempt < randomNumber){
                     resultado.innerHTML = "O número é menor do que " + attempt;  
-                    } else if (attempt > randomNumber){
+                    tryNumber--;
+                  } else if (attempt > randomNumber){
                     resultado.innerHTML = "O número é maior do que " + attempt;
-                    }
+                    tryNumber--;
+                  }
                }
             } else if (attemptsNow == 2){
                 if (attempt == randomNumber) {
@@ -57,6 +71,14 @@
             }
             attemptsNow++
         }
+
+
+        function R() {
+  randomNumber = parseInt(Math.random() *11);
+  tryNumber = 3;
+  attemptsNow= 0 ;
+  resultado.innerHTML = " ";
+}
 
 
     </script>
