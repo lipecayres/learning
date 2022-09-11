@@ -42,7 +42,8 @@
 
         printTryNumber.innerHTML = "Você tem "+ tryNumber + " tentativas";  
 
-                    
+        console.log(randomNumber)
+        console.log("")
         function guess() {
 
           var attempt = parseInt(document.getElementById("valor").value);
@@ -74,6 +75,9 @@
               }
             attemptsNow++
 
+            console.log("tentativas " + attemptsNow)
+            console.log("chances " +tryNumber)
+            
             printTryNumber.innerHTML = "Você tem "+ tryNumber + " tentativas";  
 
           }
@@ -84,6 +88,7 @@
   tryNumber = 3;
   attemptsNow= 0 ;
   resultado.innerHTML = " ";
+
 }
 
 
