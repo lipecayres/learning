@@ -40,7 +40,7 @@
         var attemptsNow = 0;
         var tryNumber = 3;
 
-        printTryNumber.innerHTML = "Você tem "+ tryNumber + " tentativas";  
+        printTryNumber.innerHTML = "Suas chances: "+ tryNumber;  
 
         console.log(randomNumber)
         console.log("")
@@ -53,27 +53,35 @@
                 resultado.innerHTML = "Número inválido. Tente um número de 0 a 10.";
                 } else if (attempt == randomNumber) {
                 resultado.innerHTML = "Parabéns, você acertou. O número é " + randomNumber;
+                tryNumber--;
+                attemptsNow++;
                 } else {
                     if (attempt < randomNumber){
-                    resultado.innerHTML = "O número é menor do que " + attempt;  
+                    resultado.innerHTML = "O número é maior do que " + attempt;  
                     tryNumber--;
+                    attemptsNow++;
                   } else if (attempt > randomNumber){
-                    resultado.innerHTML = "O número é maior do que " + attempt;
+                    resultado.innerHTML = "O número é menor do que " + attempt;
                     tryNumber--;
+                    attemptsNow++;
                   }
                }
             } else if (attemptsNow == 2){
                 if (attempt == randomNumber) {
                 resultado.innerHTML = "Parabéns, você acertou. O número é " + randomNumber;
+                tryNumber--;
+                attemptsNow++;
                 } else {
                 resultado.innerHTML = "Tentativas acabaram. Atualize para tentar de novo."
                 tryNumber--;
+                attemptsNow++;
               }
             } else {
                 resultado.innerHTML = "Tentativas acabaram. Atualize para tentar de novo."
                 tryNumber--;
+                attemptsNow++;
               }
-            attemptsNow++
+            
 
             console.log("tentativas " + attemptsNow)
             console.log("chances " +tryNumber)
