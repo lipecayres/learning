@@ -11,11 +11,14 @@
     <section class="container">
         <div class="header" >
             <h1>LiipeC-FLIX</h1>
-            <h2>TOP 5 animes </h2>
+            <h2>TOP  animes </h2>
         </div>
 
         <div class="add-movie">
-            <p>Adicione o seu filme na lista:</p>
+            <p>LiipeC recomenda:</p>
+            <input type="url" id="animeURL" />
+            <button type="submit" onclick="addAnimes()"> Adicionar</button>
+            <div id="posters"></div>
         </div>
         <a href="https://github.com/lipecayres" target="_blank">
         <img src="https://raw.githubusercontent.com/lipecayres/my-portfolio/main/images/f_logo.png" alt="" class="my-logo">
@@ -23,40 +26,38 @@
         <img src="" >
     </section>
 
-    <script>
-        var animes =[
-            'https://cdn.myanimelist.net/images/about_me/ranking_items/4757216-b784bd05-0853-439c-b4e4-27ec46ee4c53.jpg?t=1655669475',
-            'https://br.web.img2.acsta.net/pictures/17/02/01/13/28/337995.jpg',
-            'https://www.infoanime.com.br/wa_1_p/pa_12i2wgk42q/big_yugiohduel.jpg',
-            'https://www.jbchost.com.br/editorajbc/wp-content/uploads/2018/01/The-Seven-Deadly-Sins-27-Capa_p.jpg',
-            'https://www.justwatch.com/images/poster/205245513/s332/temporada-1'
+<script>
+    var animes =[
+        'https://cdn.myanimelist.net/images/about_me/ranking_items/4757216-b784bd05-0853-439c-b4e4-27ec46ee4c53.jpg?t=1655669475',
+        'https://br.web.img2.acsta.net/pictures/17/02/01/13/28/337995.jpg',
+        'https://www.infoanime.com.br/wa_1_p/pa_12i2wgk42q/big_yugiohduel.jpg',
+        'https://www.jbchost.com.br/editorajbc/wp-content/uploads/2018/01/The-Seven-Deadly-Sins-27-Capa_p.jpg',
+        
+    
+];
 
-        ];
+    updateAnimesImages()
 
-        for (var i=0; i<animes.length; i++)
-        {
-            document.write("<img src=" + animes[i] + ">")
+    function updateAnimesImages(){
+    document.getElementById("posters").innerHTML = "";
+    for (var i = 0; i < animes.length; i++) {
+        document.getElementById("posters").innerHTML +=
+         "<img src=" + animes[i] + ">"
         };
-    </script>
+}
 
-<section class="container2">
-    <div class="your-list">
-        <p>Faça sua lista também:</p>
-        <input type="text" class='add-movie' placeholder="URL da imagem do anime">
-        <button>Adicionar</button>
-    </div>
-    <script>
-        var addAnimes =[];
-
-        for (var i=0; i<animes.length; i++)
-        {
-            document.write("<img src=" + addAnimes[i] + ">")
-        };
-
-        function add-animes(){
-            
+    function addAnimes(){
+        var animesURL = document.getElementById("animeURL").value;
+        if (animes.includes(animesURL)){
+            alert("Já adicionado")
+        } else {
+            animes.push(animesURL);
         }
-    </script>
+        updateAnimesImages()
+    }
+ 
+    
+</script>
 
 </section>
 
