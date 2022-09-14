@@ -16,9 +16,14 @@
 
         <div class="add-movie">
             <p>Adicione os seus favoritos também:</p>
+            <input type="text" id="animeName" placeholder="Nome do anime" />
             <input type="url" id="animeURL" placeholder="URL da imagem" />
             <button type="submit" onclick="addAnimes()"> Adicionar</button>
+            <button type="submit" onclick="removeAnimes()"> Remover</button>
             <div id="posters"></div>
+            <br>
+            <button type="submit" onclick="removeAnimes()"> Remover</button>
+
         </div>
         <a href="https://github.com/lipecayres" target="_blank">
         <img src="https://raw.githubusercontent.com/lipecayres/my-portfolio/main/images/f_logo.png" alt="" class="my-logo">
@@ -36,27 +41,45 @@
     
 ];
 
+
     updateAnimesImages()
 
     function updateAnimesImages(){
-    document.getElementById("posters").innerHTML = "";
-    for (var i = 0; i < animes.length; i++) {
-        document.getElementById("posters").innerHTML +=
-         "<img src=" + animes[i] + ">"
-        };
+        document.getElementById("posters").innerHTML = "";
+        for (var i = 0; i < animes.length; i++) {
+            document.getElementById("posters").innerHTML +=
+            "<img src=" + animes[i] + ">"
+            };
 }
 
     function addAnimes(){
+        
         var animesURL = document.getElementById("animeURL").value;
+        
         if (animes.includes(animesURL)){
-            alert("Já adicionado")
+            alert("Já adicionado");
         } else {
             animes.push(animesURL);
         }
-        document.getElementById("animeURL").value = ""
+        document.getElementById("animeURL").value = "";
+        updateAnimesImages();
+    }
+
+    function removeAnimes () {
+        animes.pop();
+        
         updateAnimesImages()
     }
- 
+
+    function validateParamethers () {
+        if (!(animesURL.endsWith(".jpg") || animesURL.endsWith(".png") || animesURL.endsWith (".jpeg")))
+            alert("Não é uma imagem. Tente de novo!")
+            return false
+        if (!name){
+            alert("Campo título vazio!")
+            return false
+        }
+    }
     
 </script>
 
