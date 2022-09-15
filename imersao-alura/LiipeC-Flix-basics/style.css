@@ -5,7 +5,7 @@
   }
   
 .my-logo {
-    width: 40px;
+    width: 70px;
     position: absolute;
     top: 10px;
     right: 10px;
@@ -29,9 +29,9 @@ body{
 }
 
 .header h1{
-    font-size: 50px;
+    font-size: 70px;
     color: white;
-    padding-top: 15px;
+    padding-top: 25px;
 } 
 
 .header h2{
