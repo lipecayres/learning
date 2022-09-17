@@ -101,10 +101,10 @@ function pegaAtributoSelec() {
 
 function jogar() {
   var atributoSelecionado = pegaAtributoSelec();
-  var elementoResultado;
+  var elementoResultado = document.getElementById("resultado");
   var valorCartaJogador = cartaJogador.atributos[atributoSelecionado];
   var valorCartaMaquina = cartaMaquina.atributos[atributoSelecionado];
-  var elementoResultado = document.getElementById("resultado");
+
 
   if (valorCartaJogador > valorCartaMaquina) {
     elementoResultado.innerHTML = "Você venceu";
@@ -116,8 +116,6 @@ function jogar() {
   }
   console.log(valorCartaMaquina);
 }
-
-
     
 </script>
 
