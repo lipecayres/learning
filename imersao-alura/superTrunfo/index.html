@@ -73,9 +73,22 @@ var cartajogador = 0;
     
     document.getElementById("btnSortear").disabled = true;
     document.getElementById("btnJogar").disabled = false;
-    
-
+    exibirOpcoes();
 }
+
+    function exibirOpcoes(){
+        var opcoes = document.getElementById("opcoes")
+        var opcoesTexto = "";
+
+        for (var atributo in cartajogador.atributos){
+            opcoesTexto += 
+            "<input type='radio' name='atributo' value='" + 
+            atributo +
+            "'>" + atributo;
+        }
+        opcoes.innerHTML = opcoesTexto;
+}
+
     
 </script>
 
