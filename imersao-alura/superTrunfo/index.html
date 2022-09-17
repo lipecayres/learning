@@ -89,6 +89,17 @@ var cartajogador = 0;
         opcoes.innerHTML = opcoesTexto;
 }
 
+function pegaAtributoSelec() {
+  var radioAtributos = document.getElementsByName("atributo");
+
+  for (var i = 0; i < radioAtributos.length; i++) {
+    if (radioAtributos[i].checked == true) {
+      return radioAtributos[i].value;
+    }
+  }
+}
+
+
     
 </script>
 
