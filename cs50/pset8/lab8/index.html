@@ -25,6 +25,14 @@
                 <h2>Part 1: Multiple Choice </h2>
                 <hr>
 
+                <h3>What's the ideal amount of water a person should drink everyday?</h3>
+                <button class="correct-btn" onclick="rightAnswer()">1L to eack 20kg</button>
+                <button class="wrong-btn" onclick="wrongAnswer()">1L to eack 20kg</button>
+                <button class="wrong-btn" onclick="wrongAnswer()">1L to eack 20kg</button>
+                <button class="wrong-btn" onclick="wrongAnswer()">1L to eack 20kg</button>
+                <button class="wrong-btn" onclick="wrongAnswer()">1L to eack 20kg</button>
+                <button> </button>
+                <h3 id="answer"></h3>
                 <!-- TODO: Add multiple choice question here -->
 
             </div>
@@ -33,10 +41,32 @@
                 <h2>Part 2: Free Response</h2>
                 <hr>
 
-                <!-- TODO: Add free response question here -->
+                <h3 id="answer2"></h3>
 
             </div>
 
+            <a href="https://github.com/lipecayres" target="_blank">
+            <img src="https://raw.githubusercontent.com/lipecayres/my-portfolio/main/images/f_logo.png" alt="" class="my-logo">
+             </a>
+
         </div>
+
+        <script>
+
+
+            function rightAnswer(){
+                var answer = window.document.getElementById('answer')
+
+                answer.innerHTML = "Nice, you're right!"
+            } 
+
+            function wrongAnswer(){
+                var answer = window.document.getElementById('answer')
+
+                answer.innerHTML = "Sorry. It's wrong. Try again!"
+            } 
+
+
+        </script>
     </body>
 </html>
