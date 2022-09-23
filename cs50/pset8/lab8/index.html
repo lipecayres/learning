@@ -28,10 +28,20 @@
                 })
             }
 
+            // Checking free response correct/incorrect
+            document.querySelector('#btnQ2').addEventListener('click', function(){
+                let input = document.querySelector('input');
 
+                if (input.value === "Bulbasaur"){
+                    btnQ2.style.backgroundColor = 'green';
+                    document.querySelector('#answer2').innerHTML = 'Correct!';
+                } else {
+                    btnQ2.style.backgroundColor = 'red';
+                    document.querySelector('#answer2').innerHTML = 'Incorrect. Try again!';
+                }
+            });
 
-
-         })
+         });
 
         </script>
 
@@ -65,7 +75,7 @@
 
                 <h3 id="">What's the name of the first pokemon on Pokedex?</h3>
                 <input type="text" placeholder="Insert name here">
-                <button id="btn-q2"> Responder</button>
+                <button id="btnQ2"> Responder</button>
 
                 <h3 id="answer2"></h3>
                 
