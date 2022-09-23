@@ -7,8 +7,31 @@
         <title>Trivia!</title>
 
         <script>
+        
+        // Run script onde DOM is loaded
+         document.addEventListener('DOMContentLoaded', function(){
 
-            // TODO: Add code to check answers to questions
+            // Correct answer -> change color to green
+            let correct = document.querySelector('.correct');
+            correct.addEventListener('click', function(){
+                correct.style.backgroundColor = 'green';
+                document.querySelector('#answer1').innerHTML = 'Correct!'
+            })
+
+            // Incorrect answer -> change to red
+
+            let incorrect = document.querySelectorAll('.incorrect');
+            for (let i = 0; i < incorrect.length; i++){
+                incorrect[i].addEventListener('click', function(){
+                    incorrect[i].style.backgroundColor = 'red';
+                    document.querySelector('#answer1').innerHTML = 'Incorrect. Try again!'
+                })
+            }
+
+
+
+
+         })
 
         </script>
 
@@ -26,13 +49,13 @@
                 <hr>
 
                 <h3>What's the ideal amount of water a person should drink everyday?</h3>
-                <button class="correct-btn" onclick="rightAnswer()">1L to eack 20kg</button>
-                <button class="wrong-btn" onclick="wrongAnswer()">4L everyday</button>
-                <button class="wrong-btn" onclick="wrongAnswer()">At least 1.8L</button>
-                <button class="wrong-btn" onclick="wrongAnswer()">2L </button>
-                <button class="wrong-btn" onclick="wrongAnswer()">2.5L</button>
+                <button class="correct" >1L to eack 20kg</button>
+                <button class="incorrect">4L everyday</button>
+                <button class="incorrect">At least 1.8L</button>
+                <button class="incorrect">2L </button>
+                <button class="incorrect">2.5L</button>
 
-                <h3 id="answer"></h3>
+                <h3 id="answer1"></h3>
 
             </div>
 
@@ -40,9 +63,11 @@
                 <h2>Part 2: Free Response</h2>
                 <hr>
 
-                <h3 id="answer2">What's the name of the first pokemon on Pokedex?</h3>
-                <input type="text" id="pokemon" placeholder="Insert name here">
-                <button id="pokemon-btn" type="submit"> Responder</button>
+                <h3 id="">What's the name of the first pokemon on Pokedex?</h3>
+                <input type="text" placeholder="Insert name here">
+                <button id="btn-q2"> Responder</button>
+
+                <h3 id="answer2"></h3>
                 
 
             </div>
@@ -53,22 +78,5 @@
 
         </div>
 
-        <script>
-
-
-            function rightAnswer(){
-                var answer = window.document.getElementById('answer')
-
-                answer.innerHTML = "Nice, you're right!"
-            } 
-
-            function wrongAnswer(){
-                var answer = window.document.getElementById('answer')
-
-                answer.innerHTML = "Sorry. It's wrong. Try again!"
-            } 
-
-
-        </script>
     </body>
 </html>
