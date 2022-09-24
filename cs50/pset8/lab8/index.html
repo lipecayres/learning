@@ -7,8 +7,41 @@
         <title>Trivia!</title>
 
         <script>
+        
+        // Run script onde DOM is loaded
+         document.addEventListener('DOMContentLoaded', function(){
 
-            // TODO: Add code to check answers to questions
+            // Correct answer -> change color to green
+            let correct = document.querySelector('.correct');
+            correct.addEventListener('click', function(){
+                correct.style.backgroundColor = 'green';
+                document.querySelector('#answer1').innerHTML = 'Correct!'
+            })
+
+            // Incorrect answer -> change to red
+
+            let incorrect = document.querySelectorAll('.incorrect');
+            for (let i = 0; i < incorrect.length; i++){
+                incorrect[i].addEventListener('click', function(){
+                    incorrect[i].style.backgroundColor = 'red';
+                    document.querySelector('#answer1').innerHTML = 'Incorrect. Try again!'
+                })
+            }
+
+            // Checking free response correct/incorrect
+            document.querySelector('#btnQ2').addEventListener('click', function(){
+                let input = document.querySelector('input');
+
+                if (input.value === "Bulbasaur"){
+                    btnQ2.style.backgroundColor = 'green';
+                    document.querySelector('#answer2').innerHTML = 'Correct!';
+                } else {
+                    btnQ2.style.backgroundColor = 'red';
+                    document.querySelector('#answer2').innerHTML = 'Incorrect. Try again!';
+                }
+            });
+
+         });
 
         </script>
 
@@ -25,7 +58,14 @@
                 <h2>Part 1: Multiple Choice </h2>
                 <hr>
 
-                <!-- TODO: Add multiple choice question here -->
+                <h3>What's the ideal amount of water a person should drink everyday?</h3>
+                <button class="correct" >1L to eack 20kg</button>
+                <button class="incorrect">4L everyday</button>
+                <button class="incorrect">At least 1.8L</button>
+                <button class="incorrect">2L </button>
+                <button class="incorrect">2.5L</button>
+
+                <h3 id="answer1"></h3>
 
             </div>
 
@@ -33,10 +73,20 @@
                 <h2>Part 2: Free Response</h2>
                 <hr>
 
-                <!-- TODO: Add free response question here -->
+                <h3 id="">What's the name of the first pokemon on Pokedex?</h3>
+                <input type="text" placeholder="Insert name here">
+                <button id="btnQ2"> Responder</button>
+
+                <h3 id="answer2"></h3>
+                
 
             </div>
 
+            <a href="https://github.com/lipecayres" target="_blank">
+            <img src="https://raw.githubusercontent.com/lipecayres/my-portfolio/main/images/f_logo.png" alt="" class="my-logo">
+             </a>
+
         </div>
+
     </body>
 </html>
