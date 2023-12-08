@@ -25,4 +25,10 @@ const customerCard = {
     products
 }
 
-console.log(customerCard);
+console.log(`Client name is ${customerCard.clientName} and age is ${customerCard.age}`);
+
+customerCard.age = 32;
+console.log(`New age is ${customerCard.age}`);
+console.log(`First product is ${products[0].productName}`);
+console.log(`Unit price of last product is ${products[2].unitPrice}`);
+
