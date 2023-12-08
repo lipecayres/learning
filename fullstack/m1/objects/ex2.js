@@ -32,3 +32,10 @@ console.log(`New age is ${customerCard.age}`);
 console.log(`First product is ${products[0].productName}`);
 console.log(`Unit price of last product is ${products[2].unitPrice}`);
 
+
+let totalBill = 0;
+products.forEach(element => {
+    totalBill += element.sold * element.unitPrice;
+});
+
+console.log(`\nHey ${customerCard.clientName}, your total bill today is ${totalBill}. \nHave a great day.`)
