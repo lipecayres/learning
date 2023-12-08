@@ -6,9 +6,11 @@ const person = {
     nicknames: ['Lipe', 'Fe']
 }
 
-driverLicenseCondition = (person.hasDriverLicence == true ? "has DL" : "don't have DL");
+driverLicenseCondition = person.hasDriverLicence == true ? "has DL" : "don't have DL";
 
 console.log(
-    `"${person.name} has ${person.age} years, ${person.height}cm height, ${driverLicenseCondition} and these nicknames: 
-    - ${person['nicknames'][0]}
-    - ${person['nicknames'][1]}"`)
+    `${person.name} has ${person.age} years, ${person.height}cm height, ${driverLicenseCondition} and these nicknames: `);
+
+person['nicknames'].forEach(element => {
+    console.log("- " + element);
+});
