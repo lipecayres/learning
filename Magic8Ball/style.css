@@ -95,7 +95,7 @@ body {
      * FIXME:
      * Make our "8" large enough; let's try 5rems.
      */
-    font-size: 5rem;
+    font-size: 4rem;
     margin: 20% auto;
     color: black;
   }
@@ -107,8 +107,8 @@ body {
    */
   p#answer {
     
-    color: lightblue;
-    padding: 20px;
+    color: black;
+    padding: 14px;
     letter-spacing: 2px;
   }
   
@@ -162,7 +162,4 @@ body {
    button:active{
     transform: scale(0.98);
    }
-  
-  
-  
   
