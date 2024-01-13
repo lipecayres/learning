@@ -3,13 +3,13 @@ body {
      * FIXME:
      * Give this page a background color!
      */
-  
+    background-color: azure;
   
     /*
      * FIXME:
      * Center this heading!
      */
-  
+    text-align: center;
     font-family: 'Helvetica Neue', arial;
     font-weight: 100;
   }
@@ -37,20 +37,21 @@ body {
      * FIXME:
      * Let's give the eight ball a background color!
      */
-  
+  background-color: black;
   
     /*
      * FIXME:
      * Let's use border-radius to make the div round!
      */
-  
+    border-radius: 50%;
   
     /*
      * FIXME:
      * Let's give this eight ball and width and height of 
      * 300 pixels.
      */
-  
+    height: 300px;
+    width: 300px;
   
   
     /* "Center the 8 ball so it's the center of the screen */
@@ -66,20 +67,21 @@ body {
      * FIXME:
      * Let's use border-radius to make the div round!
      */
-  
+    border-radius: 50%;
   
     /*
      * FIXME:
      * make me 50% wide and 50% high as the outside ball!
      */
   
-  
+    height: 150px;
+    width: 150px;
   
     /*
      * FIXME:
      * Place me in the middle of the outside ball!
      */
-  
+    margin: 75px auto;
   }
   
   
@@ -88,7 +90,7 @@ body {
      * FIXME:
      * Make our "8" large enough; let's try 5rems.
      */
-  
+    font-size: 5rem;
     margin: 20% auto;
     color: white;
   }
@@ -99,7 +101,8 @@ body {
    * messages "lightblue".
    */
   p#answer {
-  
+    
+    color: lightblue;
     padding: 20px;
     letter-spacing: 2px;
   }
@@ -112,7 +115,9 @@ body {
      * and text boxes a margin of 20 pixels, and a padding 
      * of 10 pixels.
      */
-  
+
+    margin: 20px;
+    padding: 10px;
   
     border: 1px solid black;
     border-radius: 10px;
