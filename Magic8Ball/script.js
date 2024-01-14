@@ -7,7 +7,7 @@
  */
 const messages = ["Chansey says that could be...", 
                   "Charizard fires lots of YES!", 
-                  "Pikachu electric probability maybe", 
+                  "Pikachu electric probability, so maybe...", 
                   "Alakazan says NOT GONNA HAPPEN", 
                   "Rocket TEAM stole your lucky, so NO!",
                   "Happy Togepi, 100% YES YES YES!"];
